@@ -1,0 +1,179 @@
+/* Filters Container */
+.homePage-filters-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* Price Inputs */
+.homePage-price-filter {
+  display: flex;
+  gap: 10px;
+}
+
+.homePage-price-input {
+  width: 120px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Search Input */
+.homePage-search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Categories */
+.homePage-product-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.homePage-product-card {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.homePage-category-checkbox {
+  margin-right: 6px;
+}
+
+.homePage-category-button {
+  font-weight: bold;
+}
+
+/* Shopping Cart Button */
+.homePage-cart-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.homePage-cart-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Modal Styles */
+.homePage-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.homePage-modal-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.homePage-modal-content h2 {
+  margin-top: 0;
+}
+
+.homePage-shopping-cart-items {
+  margin-bottom: 15px;
+}
+
+.homePage-modal-content select,
+.homePage-modal-content input {
+  width: 100%;
+  margin: 5px 0 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+/* Buttons inside modal */
+.homePage-modal-content button {
+  padding: 10px 16px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.homePage-modal-content button:first-of-type {
+  background-color: #28a745;
+  color: white;
+}
+
+.homePage-modal-content button:last-of-type {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Order Confirmation Modal */
+.homePage-modelOrder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 50, 50, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.homePage-modelOrder .modal-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.homePage-modelOrder h2,
+.homePage-modelOrder h3 {
+  margin-bottom: 10px;
+}
+
+.homePage-modelOrder select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.homePage-modelOrder button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.homePage-modelOrder button:hover {
+  background-color: #0056b3;
+}

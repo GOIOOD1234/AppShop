@@ -1,0 +1,75 @@
+.history-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.history-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #2c3e50;
+}
+
+.history-products {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.history-product-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.history-product-name {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.history-product-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.history-product-desc {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.history-product-price,
+.history-product-quantity {
+  margin: 5px 0;
+  color: #444;
+}
+
+.history-product-dates-label {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.history-product-dates-select {
+  padding: 6px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-top: 5px;
+}
+
+.history-loading,
+.history-error,
+.history-no-products {
+  text-align: center;
+  margin-top: 50px;
+  color: #888;
+  font-size: 18px;
+}

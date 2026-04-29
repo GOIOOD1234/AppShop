@@ -1,0 +1,73 @@
+/* Admin Panel Container */
+.admin-panel-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar */
+.admin-panel-sidebar {
+  width: 230px;
+  background-color: #1e293b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 10px;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.admin-panel-sidebar button {
+  background: none;
+  color: white;
+  border: none;
+  padding: 12px;
+  margin: 6px 0;
+  text-align: left;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.admin-panel-sidebar button:hover {
+  background-color: #334155;
+}
+
+/* Main Content */
+.admin-panel-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.admin-panel-content h1 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #1e293b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-panel-container {
+    flex-direction: column;
+  }
+
+  .admin-panel-sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  .admin-panel-sidebar button {
+    flex: 1;
+    margin: 0 5px;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .admin-panel-content {
+    padding: 20px 10px;
+  }
+}

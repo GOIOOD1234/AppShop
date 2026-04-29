@@ -1,0 +1,92 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
+const HistoryofShopping = () => {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const currentUser = JSON.parse(localStorage.getItem('currentUser')); // שולף את המשתמש המחובר
+
+  useEffect(() => {
+    // אם המשתמש לא מחובר, נחזיר הודעה שלא ניתן לראות את ההיסטוריה
+    if (!currentUser) {
+      setError('You must be logged in to view your purchase history.');
+      setLoading(false);
+      return;
+    }
+
+    // שולחים את בקשת ה-API כדי לקבל את פרטי המוצרים לפי המזהים
+    const fetchProductDetails = async () => {
+      try {
+        const productIds = currentUser.productsBought.map(item => item.product_id); // מגרדים את המזהים מהמוצרים שנרכשו
+        if (productIds.length > 0) {
+          // שולחים את המזהים לשרת
+          const response = await axios.get('http://localhost:5000/api/products', {
+            params: { ids: productIds.join(',') }
+          });
+
+          // מסננים את המוצרים כך שיתקבלו רק המוצרים שהמשתמש רכש
+          const purchasedProducts = response.data.data.filter(product =>
+            currentUser.productsBought.some(item => item.product_id.toString() === product._id.toString())
+          );
+
+          setProducts(purchasedProducts); // שומרים את המוצרים שהמשתמש רכש
+        } else {
+          setError('No products found in your purchase history.');
+        }
+      } catch (err) {
+        console.error('Error fetching product details:', err);
+        setError('Failed to fetch purchase history. Please try again later.');
+      } finally {
+        setLoading(false); // סיום טעינה
+      }
+    };
+
+    fetchProductDetails();
+  }, [currentUser]);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  return (
+    <div>
+      <h2>Your Purchase History</h2>
+      {products.length > 0 ? (
+        <div>
+          {products.map(product => {
+            // מוודאים שנראה רק את המוצרים שהמשתמש רכש
+            const productInHistory = currentUser.productsBought.find(item => item.product_id.toString() === product._id.toString());
+            return (
+              <div key={product._id} style={{ borderBottom: '1px solid #ccc', padding: '10px' }}>
+                <h3>{product.name}</h3>
+                <img src={product.image} alt={product.name} style={{ width: '100px', height: '100px' }} />
+                <p>{product.description}</p>
+                <p>Price: ₪{product.price}</p>
+                <p>Quantity: {productInHistory ? productInHistory.amount : 'N/A'}</p>
+      
+                <label>Purchase Dates:</label>
+                <select>
+                  {productInHistory?.date?.slice().reverse().map((d, i) => (
+                    <option key={i}>{d}</option>
+                  ))}
+                </select>
+                 
+
+
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <p>No purchases found.</p>
+      )}
+    </div>
+  );
+};
+
+export default HistoryofShopping;

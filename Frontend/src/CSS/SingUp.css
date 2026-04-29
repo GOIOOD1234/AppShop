@@ -1,0 +1,92 @@
+/* Container של הטופס */
+form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* כותרת */
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* תוויות */
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #444;
+}
+
+/* שדות קלט */
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+/* כפתורים */
+form button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* כפתור סיסמה - קטן וצמוד */
+form button[type="button"] {
+  margin-left: 10px;
+  padding: 8px;
+  background-color: #2196f3;
+}
+
+/* אפקט על רחף */
+form button:hover {
+  background-color: #45a049;
+}
+
+/* צבע אחר לסיסמה חלשה */
+label:has(+ input[name="password"]) + button + label {
+  color: red;
+  font-weight: bold;
+}
+
+/* התראה קטנה לחוזק סיסמה */
+form label[for="passwordStrength"] {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.password-field-container {
+    display: flex; 
+    align-items: center;
+    margin-top: 5px; 
+   
+}
+
+.password-field-container input {
+  
+    width: 100%; 
+    flex-grow: 1;
+    margin-top: 0;
+}
+
+.password-field-container button[type="button"] {
+    margin-left: 10px;
+    flex-shrink: 0;
+}

@@ -1,0 +1,79 @@
+.edit-user-container {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #f4f4f4;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.edit-user-title {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #333;
+}
+
+.edit-user-label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.edit-user-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #200303;
+  border-radius: 8px;
+  font-size: 16px;
+   height: 40px; /* גובה קבוע */
+  box-sizing: border-box; /* כדי שה-padding לא ישנה את הגובה */
+  font-family: inherit; /* מבטיח שהפונט זהה גם כשהסיסמה מוצגת */
+}
+
+
+
+.edit-user-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #0008ff;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.edit-user-button:hover {
+  background-color: #0300b3;
+}
+
+
+/* עוטף שדה סיסמה: מפעיל Flexbox ויישור אנכי */
+.password-field-container {
+    display: flex; /* מפעיל יישור גמיש */
+    align-items: center; /* מיישר את כל האלמנטים במרכז אנכי */
+    margin-top: 5px; /* מעביר את המרווח הקיים מה-input החוצה */
+    /* לוודא גובה קבוע אם עדיין קופץ (פחות מומלץ, אבל פועל) */
+    /* min-height: 40px; */ 
+}
+
+/* שדה קלט בתוך העוטף - צריך למלא את רוב השטח */
+.password-field-container input {
+    /* מבטל את רוחב 100% כדי שיתאים ל-Flexbox */
+    width: 100%; 
+    flex-grow: 1; /* יתפוס את כל השטח הפנוי */
+    margin-top: 0; /* מבטל את המרווח העליון שהיה על ה-input */
+}
+
+/* כפתור בתוך העוטף - שינוי קטן כדי שיתאים ליישור */
+.password-field-container button[type="button"] {
+    /* ה-margin-left: 10px; שלכם כבר מטפל ברווח */
+    margin-left: 10px;
+    flex-shrink: 0; /* מוודא שהכפתור לא יתכווץ */
+}
+

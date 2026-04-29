@@ -1,0 +1,52 @@
+
+/* אזהרות על המסך */
+.swal2-popup.custom-swal {
+  font-size: 2rem;
+}
+
+/* מצב ברירת מחדל: בהיר */
+body.light-mode {
+  background-color: white;
+  color: black;
+}
+
+/* מצב כהה */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+/* לדוגמה - כפתור */
+.toggle-btn {
+  margin: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.toggle-btn2 {
+  background-color: transparent;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.toggle-btn2::before {
+  content: '\263C';
+  font-size: 20px;
+}
+.toggle-btn2:not(.dark-mode)::before {
+  content: '\2600'; 
+}
+
+.toggle-btn2.dark-mode::before {
+  content: '\263D'; 
+}
+
+.toggle-btn2:focus {
+  outline: none;
+}

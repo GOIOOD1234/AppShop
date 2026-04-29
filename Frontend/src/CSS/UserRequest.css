@@ -1,0 +1,49 @@
+.user-request-container {
+  padding: 1rem;
+}
+
+.user-request-heading {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+/* טבלה כללית */
+.user-request-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.user-request-table thead {
+  background-color: #f1f5f9;
+}
+
+.user-request-table th,
+.user-request-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  text-align: left;
+  color: #334155;
+}
+
+.user-request-table tr:hover {
+  background-color: #f9fafb;
+}
+
+/* כפתור לינק */
+.user-request-link {
+  color: #3b82f6;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.user-request-link:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}

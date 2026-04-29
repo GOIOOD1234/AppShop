@@ -1,0 +1,63 @@
+.answer-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.answer-title {
+  font-size: 24px;
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+}
+
+.answer-field {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.answer-label {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #444;
+}
+
+.answer-input {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.answer-button {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #27ae60;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.answer-button:hover {
+  background-color: #219150;
+}
+
+.answer-loading {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 18px;
+  color: #888;
+}

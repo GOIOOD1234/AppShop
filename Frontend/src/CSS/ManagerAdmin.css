@@ -1,0 +1,97 @@
+/* ManagerAdmin Component Styles */
+.manager-admin-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.manager-admin-controls {
+  margin-bottom: 20px;
+}
+
+.manager-admin-header {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.manager-admin-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.manager-admin-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.manager-admin-buttons .add-btn,
+.manager-admin-buttons .remove-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.manager-admin-buttons .add-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.manager-admin-buttons .add-btn:hover {
+  background-color: #45a049;
+}
+
+.manager-admin-buttons .remove-btn {
+  background-color: #f44336;
+  color: white;
+}
+
+.manager-admin-buttons .remove-btn:hover {
+  background-color: #d32f2f;
+}
+
+.manager-admin-table-container {
+  margin-top: 2rem;
+}
+
+.manager-admin-table-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.manager-admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.manager-admin-table th,
+.manager-admin-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.manager-admin-table th {
+  background-color: #f2f2f2;
+}
+
+.manager-admin-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.manager-admin-table tr:hover {
+  background-color: #e6f7ff;
+}
